@@ -1,0 +1,57 @@
+
+<section>
+    <div class="container-fluid header">
+      <!-- <div class="text-right">
+          <button mat-button [matMenuTriggerFor]="menu" class="login">Login</button>
+          <button mat-button [matMenuTriggerFor]="menu">Menu</button>
+          <mat-menu #menu="matMenu">
+              <button mat-menu-item >
+                <a>Student Login</a>
+              </button>
+              <button mat-menu-item>Admin Login</button>
+            </mat-menu>
+      </div> -->
+      <div class="container text-center search_bar">
+        <div class="row">
+          <div class="col-sm-12">
+            <form #student="ngForm">
+              <mat-grid-list cols="1">
+                  <mat-form-field class="example-full-width">
+                      <input type="text" matInput placeholder="Enter Name" ngModel name="name" >
+                    </mat-form-field>
+                  <br>
+                  <mat-form-field class="example-full-width">
+                      <input type=text matInput placeholder="Enter Username or Email" ngModel name="email" >
+                    </mat-form-field>
+                  <br>
+                  <mat-form-field class="example-full-width">
+                      <input type="password" matInput placeholder="Enter Password" ngModel name="password" >
+                    </mat-form-field>
+                  <br>
+                 
+                  <mat-form-field class="example-full-width">
+                      <input type="number" matInput placeholder="Enter Roll no" ngModel name="rollno"  >
+                    </mat-form-field>
+                  <br>
+
+                  <mat-form-field class="example-full-width">
+                      <input type="text" matInput placeholder="Enter college name" ngModel name="college"  >
+                    </mat-form-field>
+                  <br>
+
+                  <mat-form-field class="example-full-width">
+                      <input type="text" matInput placeholder="Enter city name" ngModel name="city"  >
+                    </mat-form-field>
+                  <br>
+                  <button mat-button class="login" (click)="regStudeent(student.value)">Register</button>
+                  <button mat-button class="login" >Cancle</button>
+                </mat-grid-list>
+              </form >  
+          </div>
+        </div>
+       
+      </div>
+    </div>
+  </section>
+  
+  

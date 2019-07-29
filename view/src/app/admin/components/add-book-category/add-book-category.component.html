@@ -1,0 +1,13 @@
+<div class="container mt-5 text-center">
+  <form #category="ngForm" id="ClearId">
+  <mat-grid-list cols="8" fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="10px">
+    <mat-form-field class="example-full-width">
+      <input type="text" matInput placeholder="Enter Book Category"  name="bookCategoryName" ngModel>
+    </mat-form-field>
+  </mat-grid-list>
+
+  <button mat-button class="login" (click)="addBook(category.value)">Add Book Category</button>
+</form>
+</div>
+
+

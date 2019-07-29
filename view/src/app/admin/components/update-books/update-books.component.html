@@ -1,0 +1,51 @@
+
+<div class="container mt-5 text-center">
+  <form #update="ngForm"  id="form1">    
+    <mat-grid-list cols="8" fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="10px" 
+          *ngIf="oldBooks">
+        <mat-form-field class="example-full-width">
+            <input type=text matInput placeholder="Update Book name" name="bookName" [(ngModel)]="oldBooks.bookName">
+          </mat-form-field>
+        
+        <mat-form-field class="example-full-width">
+            <input type="test" matInput placeholder="Update Author Name" name="authorName" [(ngModel)]="oldBooks.authorName" >
+          </mat-form-field>
+        
+        <mat-form-field class="example-full-width">
+            <input type="text" matInput placeholder="Update Publication Name" name="pubName" [(ngModel)]="oldBooks.pubName" >
+          </mat-form-field>
+        <br>
+        <mat-form-field class="example-full-width">
+            <input type="text" matInput placeholder="Update Publication Year " name="pubYear" [(ngModel)]="oldBooks.pubYear" >
+          </mat-form-field>
+        
+        <mat-form-field class="example-full-width">
+            <input type="text" matInput placeholder="Update description " name="description" [(ngModel)]="oldBooks.description" >
+          </mat-form-field>
+        
+        <mat-form-field class="example-full-width">
+            <input type="text" matInput placeholder="Update no. of books " name="noOfBook" [(ngModel)]="oldBooks.noOfBook">
+          </mat-form-field>
+        <br>
+        <mat-form-field class="example-full-width">
+            <input type="text" matInput placeholder="Update Book Price " name="price" [(ngModel)]="oldBooks.price" >
+          </mat-form-field>
+        
+          <mat-form-field>
+            <mat-label>Select Book Cateory</mat-label>
+            <mat-select [(ngModel)]="selected2" name="category">
+              <mat-option *ngFor="let category of bookCategory" [value]="category.bookCategoryName">
+                {{category.bookCategoryName}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>  
+        <br>
+        <button mat-button class="login" (click)="updateBook(update.value)">Update Book</button>
+        <!-- <button mat-button class="login" >Cancle</button> -->
+
+      </mat-grid-list>
+    </form>  
+</div>
+
+
+  

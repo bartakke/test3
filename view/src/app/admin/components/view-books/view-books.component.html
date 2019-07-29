@@ -1,0 +1,34 @@
+<table class="table">
+    <thead>
+      <tr>            
+        <th scope="col">Book Name</th>
+        <th scope="col">Author Name</th>
+        <th scope="col">Publi. Name</th>
+        <th scope="col">Publi. Year</th>
+        <!-- <th scope="col">description</th>
+        <th scope="col">no. Of Book</th>
+        <th scope="col">Price</th> -->
+        <th scope="col">Edit</th>
+        <th scope="col">Delete</th>
+        <!-- <th scope="col">Price</th> -->
+      </tr>
+    </thead>
+    <tbody class="viewBook">
+      <tr  *ngFor="let book of booksdata">
+            <!-- <td>{{book._id}}</td>   -->
+        <td>{{book.bookName}}</td>
+        <td>{{book.authorName}}</td>
+        <td>{{book.pubName}}</td>
+        <td>{{book.pubYear}}</td>
+        <!-- <td>{{book.description}}</td>
+        <td>{{book.noOfBook}}</td>
+        <td>{{book.price}}</td> -->
+        <td>
+            <a (click)="editBook(book._id)"><mat-icon aria-label="Side nav toggle icon">create</mat-icon></a>
+        </td>
+        <td>
+            <a (click)="deleteBook(book._id)">  <mat-icon aria-label="Side nav toggle icon">delete_sweep</mat-icon></a>
+        </td>
+      </tr>
+    </tbody>
+  </table>

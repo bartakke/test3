@@ -1,0 +1,51 @@
+.grid-container {
+  margin: 20px;
+}
+
+.dashboard-card {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  right: 15px;
+  bottom: 15px;
+}
+
+.more-button {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+}
+
+.dashboard-card-content {
+  text-align: center;
+}
+
+.mat-grid-tile{
+  /* margin: 10px; */
+  border-radius: 50%;
+
+}
+
+#box1{
+  background-color : #dde9ed;
+  
+}
+
+#box2{
+  background-color : #e5d3d9;
+}
+
+#box3{
+  background-color : #f6dcd4;
+}
+
+#box4{
+  background-color : #e1dfe8;
+}
+
+.mat-grid-list a{
+  color: inherit;
+  font-size: 16px;
+  font-weight: 600;
+  
+}

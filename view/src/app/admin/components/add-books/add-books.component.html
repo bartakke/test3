@@ -1,0 +1,67 @@
+
+<div class="container mt-5 text-center">
+  <form [formGroup] = "userForm" (ngSubmit) = "uploadFile(userForm.value)" id="Login" enctype="multipart/form-data"> 
+    <mat-grid-list cols="8" fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="10px">
+        <mat-form-field class="full-width">
+            <input type=text
+                   matInput placeholder="Enter Book name"
+                   formControlName="bookName" >
+          </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+            <input type="text"
+                   matInput placeholder="Enter Author Name"
+                   formControlName="authorName" >
+          </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+            <input type="text"
+                   matInput placeholder="Enter Publication Name"
+                   formControlName="pubName" >
+          </mat-form-field>
+        <br>
+        <mat-form-field class="example-full-width">
+            <input type="text"
+                   matInput placeholder="Enter Publication Year "
+                   formControlName="pubYear" >
+          </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+            <input type="text"
+                   matInput placeholder="Enter description "
+                   formControlName="description"  >
+          </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+            <input type="text"
+                   matInput placeholder="Enter no. of books "
+                   formControlName="noOfBook" >
+          </mat-form-field>
+        <br>
+        <mat-form-field class="example-full-width">
+            <input type="text"
+                   matInput placeholder="Enter Book Price "
+                   formControlName="price" >
+          </mat-form-field>
+
+          <mat-form-field>
+            <mat-label>Select Book Cateory</mat-label>
+            <mat-select formControlName="category">
+              <mat-option *ngFor="let category of bookCategory" [value]="category.bookCategoryName">
+                {{category.bookCategoryName}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <input  type="file"  accept="image/*" (change)="onFileSelect($event)" name="bookCover">
+          <!-- <button mat-button #upload class="login" (click)="file.click()">Upload file</button> -->
+        <br>
+        
+        <button mat-button class="login">Add Book</button>
+        <!-- <button mat-button class="login" >Cancle</button> -->
+
+      </mat-grid-list>
+    </form>
+</div>
+
+

@@ -1,0 +1,46 @@
+<div class="container">
+  <div class="row  mt-5">
+    <div class="col-md-6 offset-md-3 ">
+      <ul class="list-group list-group-flush" *ngIf="bookData">
+          <li class="list-group-item">
+              <!-- {{bookData.bookName}}hihi -->
+              <!-- <label><b>Book Name :-</b></label> -->
+              <!-- <span>sds{{bookData.bookCover}}</span> -->
+              <img src='localhost:8888/{{bookData.bookCover}}' >
+            </li>
+        <li class="list-group-item">
+          <!-- {{bookData.bookName}}hihi -->
+          <label><b>Book Name :-</b></label>
+          <span>{{bookData.bookName}}</span>
+        </li>
+        <li class="list-group-item" >
+          <label><b>Book Author Name :-</b></label>
+          <span> {{bookData.authorName}}</span>
+        </li>
+        <li class="list-group-item">
+          <label><b>Book Publication Name :-</b></label>
+          <span> {{bookData.pubName}}</span>
+        </li>
+        <li class="list-group-item">
+            <label><b>Book Publication Year :-</b></label>
+          <span> {{bookData.pubYear}}</span>
+        </li>
+        <li class="list-group-item">
+            <label><b>Book Avilable :-</b></label>
+          <span> {{bookData.noOfBook}}</span>
+        </li>
+        <li class="list-group-item">
+            <label><b>Book Description :-</b></label>
+          <span> {{bookData.description}}</span>
+        </li>
+        <li class="list-group-item">
+            <label><b>Book Price :-</b></label>
+          <span> {{bookData.price}}</span>
+        </li>
+        <li class="list-group-item">
+        <button mat-button class="login"  (click)="readRequest(bookData)">Want To Read</button>          
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

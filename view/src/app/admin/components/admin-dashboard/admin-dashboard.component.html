@@ -1,0 +1,44 @@
+
+<div class="container mt-5 " >
+  <mat-grid-list cols="4" rowHeight="150px" fxLayout="column" fxLayoutGap="32px" >
+    <a routerLink="totol-members">
+      <mat-grid-tile id="box1">
+        <mat-icon aria-label="Side nav toggle icon">people</mat-icon>&nbsp;
+          Total Members
+      </mat-grid-tile>
+    </a>
+    <a routerLink="#">
+      <mat-grid-tile id="box2">
+        <mat-icon aria-label="Side nav toggle icon">layers</mat-icon>&nbsp;
+          Totoal books  3000
+      </mat-grid-tile>
+    </a>
+    <a routerLink="expired-books">
+      <mat-grid-tile id="box3">
+        <mat-icon aria-label="Side nav toggle icon">delete_sweep</mat-icon>&nbsp;
+          Expired Books
+      </mat-grid-tile>
+    </a>
+    <a routerLink="lossed-books">
+      <mat-grid-tile id="box4">
+        <mat-icon aria-label="Side nav toggle icon">event_busy</mat-icon>&nbsp;
+          Loosed Book
+      </mat-grid-tile>
+    </a>
+  </mat-grid-list>
+</div>
+
+<!-- <div fxFlex="25"
+      fxFlex.md="33"
+      fxFlex.sm="50"
+      fxFlex.xs="100"
+      fxLayout="column">
+      <mat-grid-tile id="box4">
+          <mat-icon aria-label="Side nav toggle icon">event_busy</mat-icon>&nbsp;
+            Loosed Book
+      </mat-grid-tile>
+    </div> -->
+
+<div class="container mt-5">
+<router-outlet></router-outlet>
+</div>

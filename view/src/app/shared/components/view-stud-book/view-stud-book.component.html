@@ -1,0 +1,89 @@
+
+<section>
+  <div class="container-fluid header">
+    <div class="text-right">
+        <button mat-button  routerLink="login" class="login">Login</button>
+        <!-- <button mat-button [matMenuTriggerFor]="menu">Menu</button> -->
+        <!-- <mat-menu #menu="matMenu">
+            <button mat-menu-item routerLink="">
+              <a>Student Login</a>
+            </button>
+            <button mat-menu-item routerLink="">
+              Admin Login</button>
+          </mat-menu> -->
+    </div>
+    <div class="container text-center search_bar">
+      <div class="row">
+        <div class="col-sm-12">
+            <mat-grid-list cols="1">
+                <mat-form-field class="example-full-width">
+                    <input matInput  >
+                </mat-form-field>
+              </mat-grid-list>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- <section class="mt-5">
+  <div class = "container">
+    <div class="row">
+      <div class="col-sm-3" >
+        <mat-card class="example-card" *ngFor="#book from AllBooks">
+          <mat-card-header class="text-center"  >
+            <div mat-card-avatar class="example-header-image "></div>
+            <mat-card-title>{{book.bookName}}</mat-card-title>
+            <mat-card-subtitle>Book Author</mat-card-subtitle>
+          </mat-card-header>
+          <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+          <mat-card-content>
+            <p>
+              The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+              A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+              bred for hunting.
+            </p>
+          </mat-card-content>
+          <mat-card-actions class="text-center">
+            <button mat-button class="matbutton">More Deatils</button>
+            <button mat-button>SHARE</button>
+          </mat-card-actions>
+        </mat-card>
+        <div class="col-sm-3">
+          <div class="card" style="width: 18rem;" *ngFor="#book from AllBooks">
+            <img class="card-img-top" src="" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">{{book.bookName}}</h5>
+              <p class="card-text">{{book.bookName}}</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+      
+    </div>
+  
+</section> -->
+
+
+<section class="mt-5">
+  <div class = "container">
+    <div class="row">
+      <div class="col-sm-3" *ngFor="let book of AllBooks" >
+        <div class="cardMargin m-1">
+          <div class="card cardMargin" style="width: 18rem;" >
+            <!-- <img class="card-img-top" src="..." alt="Card image cap"> -->
+            <div class="card-body">
+              <h5 class="card-title">{{book.bookName}}</h5>
+              <p class="card-text">{{book.authorName}}</p>
+              <p class="card-text">{{book.description}}</p>
+              <a  class="btn btn-primary" (click) = "bookDetails(book._id)">More Deatils</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> 
+</section>       
+

@@ -1,0 +1,39 @@
+
+<section>
+    <div class="container-fluid header">
+      <!-- <div class="text-right">
+          <button mat-button [matMenuTriggerFor]="menu" class="login">Login</button>
+          <button mat-button [matMenuTriggerFor]="menu">Menu</button>
+          <mat-menu #menu="matMenu">
+              <button mat-menu-item >
+                <a>Student Login</a>
+              </button>
+              <button mat-menu-item>Admin Login</button>
+            </mat-menu>
+      </div> -->
+      <div class="container text-center search_bar">
+        <div class="row">
+          <div class="col-sm-12">
+            <form #loging="ngForm">
+              <mat-grid-list cols="1">
+                  <mat-form-field class="example-full-width">
+                      <input type=text matInput placeholder="Enter Username" ngModel name="email" >
+                    </mat-form-field>
+                  <br>
+                  <mat-form-field class="example-full-width">
+                      <input type="email" matInput placeholder="Enter Password" ngModel name="password">
+                    </mat-form-field>
+                  <br>
+                  <button mat-button class="login" (click) ="studLogin(loging.value)">Login</button>
+                  <button mat-button class="login" routerLink="/registerStud">New User</button>
+
+                </mat-grid-list>
+              </form>    
+          </div>
+        </div>
+       
+      </div>
+    </div>
+  </section>
+  
+  
